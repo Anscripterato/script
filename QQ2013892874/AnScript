@@ -1,6 +1,32 @@
-local id = game.GameId
-local gana = ""
-if id == 1268927906 then
-gana = "力量传奇"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87.lua"))()
+local name = {
+	--力量传奇
+	[1268927906] = "力量传奇",
+	--力量传奇
+	[1119466531] = "极速传奇",	
+}
+
+local listPre = {
+	--力量传奇
+	[1268927906] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87.lua'))()",
+	--极速传奇
+	[1119466531] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E6%9E%81%E9%80%9F%E4%BC%A0%E5%A5%87.lua'))()",	
+}
+
+if listPre[game.GameId] ~= nil then
+	getgenv().messagebox = function()
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "欢迎使用安脚本";
+                Text ="当前游戏:"..name[tonumber(game.GameId)];
+                Icon = "rbxassetid://125659062095965";
+                Duration = 2.5
+})
+	loadstring(listPre[tonumber(game.GameId)])()
+else
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "提示";
+                Text ="安脚本暂不支持此游戏";
+                Icon = "rbxassetid://125659062095965";
+                Duration = 2.5
+})
 end
