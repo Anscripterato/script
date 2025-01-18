@@ -1,0 +1,6 @@
+local id = game.GameId
+local gana = ""
+if id == 1268927906 then
+gana = "力量传奇"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87.lua"))()
+end
