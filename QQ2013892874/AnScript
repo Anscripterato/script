@@ -1,8 +1,10 @@
 local name = {
 	--力量传奇
 	[1268927906] = "力量传奇",
-	--力量传奇
-	[1119466531] = "极速传奇",	
+	--极速传奇
+	[1119466531] = "极速传奇",
+        --动物进化模拟器
+	[3358419523] = "动物进化模拟器",
 }
 
 local listPre = {
@@ -10,6 +12,8 @@ local listPre = {
 	[1268927906] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E5%8A%9B%E9%87%8F%E4%BC%A0%E5%A5%87.lua'))()",
 	--极速传奇
 	[1119466531] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E6%9E%81%E9%80%9F%E4%BC%A0%E5%A5%87.lua'))()",	
+        --动物进化模拟器
+	[3358419523] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/Anscripterato/script/refs/heads/main/%E5%8A%A8%E7%89%A9%E8%BF%9B%E5%8C%96%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()",
 }
 
 if listPre[game.GameId] ~= nil then
